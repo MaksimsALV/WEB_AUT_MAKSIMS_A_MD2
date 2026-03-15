@@ -14,6 +14,11 @@ describe('md2 - Maksims A', () => {
             AppointmentIndexPage.clickOnMakeAppointmentButton();
             LoginPage.loginWithDemoAccount();
             MakeAppointmentPage.selectFromFacilityDropdown();
+            MakeAppointmentPage.checkApplyForHospitalReadmission();
+            MakeAppointmentPage.selectMedicareRadioButton();
+            MakeAppointmentPage.setVisitDateFromCalendar();
+            MakeAppointmentPage.setComment();
+            MakeAppointmentPage.clickBookAppointmentButton();
         });
     });
 });
