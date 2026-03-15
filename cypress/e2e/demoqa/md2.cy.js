@@ -2,6 +2,7 @@ import {VisitBasePage} from "../pageObjects/VisitBasePage";
 import {AppointmentIndexPage} from "../pageObjects/AppointmentIndexPage";
 import {LoginPage} from "../pageObjects/LoginPage";
 import {MakeAppointmentPage} from "../pageObjects/MakeAppointmentPage";
+import {SummaryPage} from "../pageObjects/SummaryPage";
 
 describe('md2 - Maksims A', () => {
     context('MD2 test scenario', () => {
@@ -19,6 +20,11 @@ describe('md2 - Maksims A', () => {
             MakeAppointmentPage.setVisitDateFromCalendar();
             MakeAppointmentPage.setComment();
             MakeAppointmentPage.clickBookAppointmentButton();
+            SummaryPage.validateFacility();
+            SummaryPage.validateHospitalReadmissionCheckbox();
+            SummaryPage.validateMedicaid();
+            SummaryPage.validateVisitDate();
+            SummaryPage.validateComment();
         });
     });
 });
