@@ -3,6 +3,8 @@ import {AppointmentIndexPage} from "../pageObjects/AppointmentIndexPage";
 import {LoginPage} from "../pageObjects/LoginPage";
 import {MakeAppointmentPage} from "../pageObjects/MakeAppointmentPage";
 import {SummaryPage} from "../pageObjects/SummaryPage";
+import {Sidebar} from "../pageObjects/Sidebar";
+import {HistoryPage} from "../pageObjects/HistoryPage";
 
 describe('md2 - Maksims A', () => {
     context('MD2 test scenario', () => {
@@ -25,6 +27,16 @@ describe('md2 - Maksims A', () => {
             SummaryPage.validateMedicaid();
             SummaryPage.validateVisitDate();
             SummaryPage.validateComment();
+        });
+
+        it('Test scenario 2 - appointment history', () => {
+            VisitBasePage.visit();
+            AppointmentIndexPage.clickOnMakeAppointmentButton();
+            LoginPage.loginWithDemoAccount();
+            Sidebar.clickOnBurger();
+            Sidebar.validateSidebar();
+            Sidebar.clickOnHistory();
+            HistoryPage.validateEmptyHistory();
         });
     });
 });
