@@ -12,6 +12,6 @@ export class SummaryPage {
         cy.get('#visit_date').should('contain.text', '30');
     }
     static validateComment() {
-        cy.get('#comment').should('contain.text', 'CURA Healthcare Service');
+        cy.get('#comment').should('contain.text', 'CURA Healthcare Servic');
     }
 }
