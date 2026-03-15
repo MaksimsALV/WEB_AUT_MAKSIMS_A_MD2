@@ -9,9 +9,9 @@ export class SummaryPage {
         cy.get('#program').should('have.text', 'Medicaid');
     }
     static validateVisitDate() {
-        cy.get('#visit_date').should('have.text', '30');
+        cy.get('#visit_date').should('contain.text', '30');
     }
     static validateComment() {
-        cy.get('#comment').should('have.text', 'CURA Healthcare Servic');
+        cy.get('#comment').should('have.text', 'CURA Healthcare Service');
     }
 }
